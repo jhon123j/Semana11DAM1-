@@ -14,10 +14,13 @@ public interface PersonaDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     public  void insertar(Persona persona);
+
     @Update
     void actualizar(Persona persona);
+
     @Query("DELETE FROM persona")
     void eliminar();
+
     @Query("SELECT * FROM persona LIMIT 1")
     LiveData<Persona> obtener();
 
