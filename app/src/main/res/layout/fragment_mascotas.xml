@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".view.fragments.MascotasFragment">
 
-    <SearchView
+    <androidx.appcompat.widget.SearchView
         android:id="@+id/svMascota"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -19,8 +19,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMascotas"
-        android:layout_width="520dp"
-        android:layout_height="839dp"
+        android:layout_width="500dp"
+        android:layout_height="831dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

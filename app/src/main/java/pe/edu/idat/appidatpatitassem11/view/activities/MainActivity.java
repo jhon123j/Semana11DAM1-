@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(loginResponse.isRpta()){
             startActivity(new Intent(MainActivity.this,
                     HomeActivity.class));
+
         }else{
             Snackbar.make(binding.getRoot(),loginResponse.getMensaje(),Snackbar.LENGTH_LONG);
         }

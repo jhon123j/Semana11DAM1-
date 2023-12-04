@@ -21,7 +21,8 @@ import pe.edu.idat.appidatpatitassem11.retrofit.response.MascotaResponse;
 import pe.edu.idat.appidatpatitassem11.view.adapters.MascotaAdapter;
 import pe.edu.idat.appidatpatitassem11.viewmodel.MascotaViewModel;
 
-public class MascotasFragment extends Fragment implements SearchView.OnQueryTextListener {
+public class MascotasFragment extends Fragment implements SearchView.OnQueryTextListener,
+        androidx.appcompat.widget.SearchView.OnQueryTextListener {
 
     private FragmentMascotasBinding binding;
     private MascotaViewModel mascotaViewModel;
