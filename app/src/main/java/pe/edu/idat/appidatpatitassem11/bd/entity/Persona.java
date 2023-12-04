@@ -1,9 +1,13 @@
 package pe.edu.idat.appidatpatitassem11.bd.entity;
 
-@Entity
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "persona")
 public class Persona {
 
-    private String id;
+    @PrimaryKey
+    private int id;
     private String nombres;
     private String apellidos;
     private String email;
