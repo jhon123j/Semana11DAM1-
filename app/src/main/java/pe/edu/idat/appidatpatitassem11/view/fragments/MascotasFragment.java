@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 
 import java.util.List;
 
@@ -20,7 +21,7 @@ import pe.edu.idat.appidatpatitassem11.retrofit.response.MascotaResponse;
 import pe.edu.idat.appidatpatitassem11.view.adapters.MascotaAdapter;
 import pe.edu.idat.appidatpatitassem11.viewmodel.MascotaViewModel;
 
-public class MascotasFragment extends Fragment {
+public class MascotasFragment extends Fragment implements SearchView.OnQueryTextListener {
 
     private FragmentMascotasBinding binding;
     private MascotaViewModel mascotaViewModel;
@@ -47,6 +48,18 @@ public class MascotasFragment extends Fragment {
                     }
                 }
         );
+        binding.svMascota.setOnQueryTextListener(this);
         return binding.getRoot();
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String s) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String s) {
+        mascotaAdapter.filtrarMascotas(s);
+        return false;
     }
 }
